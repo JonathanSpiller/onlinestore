@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    <title>Joni</title>
+{% endblock %}
+
+
+{% block content %}
+    <h2>Home page!</h2>
+    <p>This is from the home content block</p>
+    <button class="btn btn-primary">Click Me</button>
+
+    {% for item in products %}
+
+        {% if item['instock'] == True %}
+            <h1>{{ item['name'] }}</h1>
+            <p>${{item['price'] }}</p>
+        {% endif %}
+
+        {{data['name']}}
+
+
+    {% endfor %}
+
+{% endblock %}
+
